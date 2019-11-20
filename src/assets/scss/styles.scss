@@ -1,0 +1,118 @@
+// Colors
+$base-button-background-color: #990ae3;
+$base-button-background-color-hover: #720aae;
+$base-button-text-color: white;
+
+// Media queries
+$break-small: 500px;
+$break-large: 1100px;
+
+// Font families
+$title-font: Arial, Helvetica, sans-serif;
+$button-font: Helvetica Neue, helvetica, arial, sans-serif;
+
+//Style Reset
+html, body, h1, h2, h3, h4, h5, p {
+  margin: 0;
+  padding: 0;
+}
+
+// Utils class
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+// Styles
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+
+  h1 {
+    margin: 1.3rem auto;
+    text-align: center;
+  }
+}
+
+.flex-wrapper {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h2 {
+    color: #d8d8d8;
+  }
+}
+
+.list-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+
+  @media screen and (max-width: $break-large) {
+    justify-content: space-around;
+  }
+
+  .card {
+    width: 300px;
+    margin: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    .card-title {
+      border-bottom: 1px solid #80808033;
+      text-align: center;
+      h2 {
+        font-family: $title-font;
+        padding: 20px 0 10px;
+      }
+    }
+    .card-details {
+      padding: 20px;
+      font-size: 1.2em;
+      text-align: center;
+      p {
+        padding-bottom: 10px;
+      }
+      .card-details-button {
+        padding: 10px 20px;
+        background-color: $base-button-background-color;
+        border-radius: 2.5rem;
+        border: none;
+        cursor: pointer;
+        a {
+          outline: none;
+          line-height: 1;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-family: $button-font;
+          font-weight: bold;
+          font-size: 1.4rem;
+          color: $base-button-text-color;
+        }
+        &:hover {
+          background-color: $base-button-background-color-hover;
+        }
+        &:active {
+          outline: none;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
