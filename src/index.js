@@ -7,7 +7,6 @@ import "./styles.scss";
 class App extends React.Component {
   constructor(props) {
     super(props);
-    console.log("test");
     this.state = {
       people: null
     };
